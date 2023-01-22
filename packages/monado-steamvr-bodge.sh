@@ -11,7 +11,7 @@ sudo setcap CAP_SYS_NICE+ep ~/.local/share/Steam/steamapps/common/SteamVR/bin/li
 
 steam-run ~/.steam/steam/steamapps/common/SteamVR/bin/vrpathreg.sh adddriver "$MONADO_PATH"/share/steamvr-monado
 
-rm ~/.local/share/Steam/ubuntu12_32/steam-runtime/usr/lib/x86_64-linux-gnu/libelf.so*
-rm ~/.local/share/Steam/ubuntu12_32/steam-runtime/usr/lib/x86_64-linux-gnu/liborc*
-rm -rf ~/.local/share/Steam/ubuntu12_32/steam-runtime/usr/lib/x86_64-linux-gnu/gst*
-rm ~/.local/share/Steam/steamapps/common/SteamVR/bin/vrwebhelper/linux64/steam-runtime-heavy/lib/x86_64-linux-gnu/libselinux.so.1
+rm -rf \
+	~/.local/share/Steam/ubuntu12_32/steam-runtime/usr/lib/x86_64-linux-gnu/{liborc*,gst*,libelf*} \
+	~/.local/share/Steam/steamapps/common/SteamVR/bin/vrwebhelper/linux64/steam-runtime-heavy/lib/x86_64-linux-gnu/libselinux* ||
+	true
