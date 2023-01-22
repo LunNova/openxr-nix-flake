@@ -13,6 +13,7 @@ let
       handTrackingSupport = true;
     };
     monado-steamvr-bodge = pkgs.writeShellScriptBin "monado-steamvr-bodge" (builtins.readFile ./monado-steamvr-bodge.sh);
+    xr-hardware = pkgs.callPackage ./xr-hardware.nix { };
   };
 in
 self

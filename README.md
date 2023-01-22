@@ -4,9 +4,13 @@
 
 `nix develop .#monado-slam-handtracking` for monado and steamvr driver with support for headsets needing slam tracking and hand tracking
 
+For non-NixOS, you may need to install xr-hardware from your distro packages.  
+For NixOS you can add xr-hardware from this flake with `services.udev.packages = [ xr-hardware ];`
+xr-hardware is not required for all headsets, in my testing the Reverb G2 probes without it.
+
 ### Testing your headset
 
-Run `monado-cli` probe to check 
+Run `monado-cli probe` to check 
 
 ### SteamVR usage
 
